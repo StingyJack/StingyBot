@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{97BF7C89-6ACA-45E5-8481-71F3F853A935}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{97BF7C89-6ACA-45E5-8481-71F3F853A935}"
 	ProjectSection(SolutionItems) = preProject
 		Standard.testsettings = Standard.testsettings
 	EndProjectSection
@@ -12,7 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{53A8D01F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{84C92EF8-8279-4A18-8750-8D9B1362E0A2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{A672A603-F35F-4824-BCE9-943B46136D93}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Packaging", "_Packaging", "{A672A603-F35F-4824-BCE9-943B46136D93}"
 	ProjectSection(SolutionItems) = preProject
 		.nuget\nuget.config = .nuget\nuget.config
 	EndProjectSection
@@ -61,7 +61,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs", "docs\", "{AAF8251A-
 		DefaultWebSiteLanguage = "Visual C#"
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{4AF502E0-96A6-4C2A-BD4A-540F5E0119B9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Docs", "_Docs", "{4AF502E0-96A6-4C2A-BD4A-540F5E0119B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Handlers", "src\StingyBot.Handlers\StingyBot.Handlers.csproj", "{CDD552B2-23D5-4096-9901-CACC78188426}"
 EndProject
