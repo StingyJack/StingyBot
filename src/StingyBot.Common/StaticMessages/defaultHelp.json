@@ -1,0 +1,47 @@
+﻿{
+  "name": "defaultHelp",
+  "staticMessages": [
+    {
+      "culture": "en-US",
+      "message": {
+        "Text": "How may I enable you today? `n_Don't forget to mention me before each command_ \n",
+        "Attachments": [
+          {
+            "fallback": "known commands",
+            "color": "#36a64f",
+            "pretext": "I know the following commands",
+            "author_name": null,
+            "author_link": null,
+            "author_icon": null,
+            "title": null,
+            "title_link": null,
+            "text": "*case* _#####_ - Displays details for a salesforce case \n`case list` - Displays the last 5 cases n *tfs wi* _#####_ - Displays details for a TFS workitem \n*tfs wiql* \"_SELECT System.ID FROM WorkItems\" - Displays details for a TFS workitem \n",
+            "fields": [],
+            "callback_id": null,
+            "actions": null,
+            "image_url": null,
+            "thumb_url": null,
+            "mrkdwn_in": [ "fields", "pretext", "text" ]
+          },
+          {
+            "fallback": "not yet known commands",
+            "color": "#F35A00",
+            "pretext": "I may learn these too...",
+            "author_name": null,
+            "author_link": null,
+            "author_icon": null,
+            "title": null,
+            "title_link": null,
+            "text": "get this from the code",
+            "fields": [],
+            "callback_id": null,
+            "actions": null,
+            "image_url": null,
+            "thumb_url": null,
+            "mrkdwn_in": [ "fields", "pretext", "text" ]
+          }
+        ]
+      }
+    }
+  ]
+}

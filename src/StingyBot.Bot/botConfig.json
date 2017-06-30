@@ -1,0 +1,112 @@
+﻿{
+  "slackConfig": {
+    "ApiKey": "GetItFromTheBotIntegrationPage"
+  },
+  "baseWebHookAddress": "http://localhost:6989/",
+  "webHookApiName": "api",
+  "webHookRouteTemplate": "api/{controller}",
+  "requiresExternalWebHookAccess": false,
+  "hears": [
+    {
+      "name": "tfsWorkitems",
+      "enabled": true,
+      "evaluationPriority": 1,
+      "triggerType": "directMention",
+      "handlerType": "messageHandler",
+      "semanticReplacementTokens": [
+        {
+          "coalescedReplacement": "WORKITEM",
+          "sourceWords": [ "wi", "pbi", "bg", "tk" ]
+        },
+        {
+          "coalescedReplacement": "WIQL_START",
+          "sourceWords": [ "wiql" ]
+        },
+        {
+          "coalescedReplacement": "SEMICOLON",
+          "sourceWords": [ ";" ]
+        }
+      ],
+      "handlerDef": {
+        "handlerFullTypeName": "StingyBot.Tfs.TfsWorkItemController, StingyBot.Tfs",
+        "configFiles": [ "tfsconfiguration.json", "tfsconfiguration.json.secret" ]
+      }
+    },
+    {
+      "name": "sfCases",
+      "enabled": true,
+      "evaluationPriority": 2,
+      "triggerType": "directMention",
+      "handlerType": "messageHandler",
+      "semanticReplacementTokens": [
+        {
+          "coalescedReplacement": "CASE",
+          "sourceWords": [ "case" ]
+        },
+        {
+          "coalescedReplacement": "LIST",
+          "sourceWords": [ "list" ],
+          "isRequired": false
+        }
+      ],
+      "handlerDef": {
+        "handlerFullTypeName": "StingyBot.SalesForce.SalesForceController, StingyBot.SalesForce",
+        "configFiles": [ "salesforcesettings.json", "salesforcesettings.json.secret" ]
+      }
+    },
+    {
+      "name": "markUnread",
+      "enabled": false,
+      "triggertype": "slashCommand",
+      "handlerType": "slashCommand",
+      "handlerDef": {
+        "handlerFullTypeName": "StingyBot.Handlers.MarkUnreadCommandHandler, StingyBot.Handlers",
+        "configFiles": [],
+        "commandConfig": {
+          "slashcommand": "/markunread",
+          "hostAddress": "http://localhost:8081/stingybot/incoming/markUnread",
+          "receiveAddress": "https://subdomain.publicwebaddress.com:443/where/slack/can/POST/to",
+          "verificationToken": "the Token in the slash command config",
+          "additionalConfig": [
+            { "defaultTime": 10 }
+          ]
+        }
+      }
+    },
+    {
+      "name": "docs links",
+      "enabled": true,
+      "evaluationPriority": 3,
+      "triggerType": "directMention",
+      "handlerType": "staticResponse",
+      "semanticReplacementTokens": [
+        {
+          "coalescedReplacement": "DOCS",
+          "sourceWords": [ "docs" ]
+        }
+      ],
+      "handlerDef": {
+        "handlerFullTypeName": "StingyBot.Handlers.StaticTextResponseHandler, StingyBot.Handlers",
+        "messageFile": "./StaticMessages/docsLinks.json"
+      }
+    }
+  ],
+  "knows": [
+    {
+      "key": "unknownCommand",
+      "enabled": true,
+      "messageFile": "./StaticMessages/unknownCommand.json"
+    },
+    {
+      "key": "defaultHelp",
+      "enabled": true,
+      "messageFile": "./StaticMessages/defaultHelp.json"
+    }
+  ],
+  "backgroundTaskHandlerDefs": [
+    {
+      "handlerFullTypeName": "StingyBot.Handlers.TeaTimeBackgroundTaskHandler, StingyBot.Handlers",
+      "configFiles": [ "teaTimeConfig.json" ]
+    }
+  ]
+}

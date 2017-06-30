@@ -1,0 +1,9 @@
+﻿{
+  "name": "unknownCommand",
+  "staticMessages": [
+    {
+      "culture": "en-US",
+      "message": { "text": "You sent a command which I don't understand" }
+    }
+  ]
+}

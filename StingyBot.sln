@@ -1,0 +1,147 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{97BF7C89-6ACA-45E5-8481-71F3F853A935}"
+	ProjectSection(SolutionItems) = preProject
+		Standard.testsettings = Standard.testsettings
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{53A8D01F-45C4-4A31-9C4F-CC79552A084C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hosts", "Hosts", "{84C92EF8-8279-4A18-8750-8D9B1362E0A2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packaging", "Packaging", "{A672A603-F35F-4824-BCE9-943B46136D93}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\nuget.config = .nuget\nuget.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HandlerExtensions", "HandlerExtensions", "{0DB980DC-BC93-4AD5-A88F-8DF03B6C2141}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Configuration.MsOverride", "src\StingyBot.Configuration.MsOverride\StingyBot.Configuration.MsOverride.csproj", "{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Common", "src\StingyBot.Common\StingyBot.Common.csproj", "{7A00D062-442C-49CD-808A-0497A2B1CED9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Bot", "src\StingyBot.Bot\StingyBot.Bot.csproj", "{8E6671E7-CFAD-46D9-94B0-2FEE536F483A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Tfs", "src\StingyBot.Tfs\StingyBot.Tfs.csproj", "{B6392920-F1A2-44AF-A166-A904DF218A15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.SalesForce", "src\StingyBot.SalesForce\StingyBot.SalesForce.csproj", "{97787A93-0604-42CC-8A87-EE6E5DCE74FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.ConsoleHost", "src\ConsoleHost\StingyBot.ConsoleHost.csproj", "{E1F2C401-1DCF-4803-BD82-8BC328204B08}"
+EndProject
+Project("{F5034706-568F-408A-B7B3-4D38C6DB8A32}") = "ChocoPack", "src\ChocoPack\ChocoPack.pssproj", "{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Tests.Integration", "src\StingyBot.Tests.Integration\StingyBot.Tests.Integration.csproj", "{33E8C02C-6CA9-4386-B51B-15E643966433}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Common.Tests", "src\StingyBot.Common.Tests\StingyBot.Common.Tests.csproj", "{A1A40FE2-75AD-4773-94DE-78BA26724CA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventuallyToBeRemoved", "EventuallyToBeRemoved", "{CDCEFE2E-C0F5-4E16-8E66-6DB496A5EDA5}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs", "docs\", "{AAF8251A-12CD-4EAD-98B5-DF5D971DEEEA}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.6.1"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_51674"
+		Debug.AspNetCompiler.PhysicalPath = "docs\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51674\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_51674"
+		Release.AspNetCompiler.PhysicalPath = "docs\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_51674\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51674"
+		SlnRelativePath = "docs\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{4AF502E0-96A6-4C2A-BD4A-540F5E0119B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Handlers", "src\StingyBot.Handlers\StingyBot.Handlers.csproj", "{CDD552B2-23D5-4096-9901-CACC78188426}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		RegenCodeFiles|Any CPU = RegenCodeFiles|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.RegenCodeFiles|Any CPU.Build.0 = RegenCodeFiles|Any CPU
+		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A00D062-442C-49CD-808A-0497A2B1CED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A00D062-442C-49CD-808A-0497A2B1CED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A00D062-442C-49CD-808A-0497A2B1CED9}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{7A00D062-442C-49CD-808A-0497A2B1CED9}.RegenCodeFiles|Any CPU.Build.0 = RegenCodeFiles|Any CPU
+		{7A00D062-442C-49CD-808A-0497A2B1CED9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A00D062-442C-49CD-808A-0497A2B1CED9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6671E7-CFAD-46D9-94B0-2FEE536F483A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6671E7-CFAD-46D9-94B0-2FEE536F483A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6671E7-CFAD-46D9-94B0-2FEE536F483A}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{8E6671E7-CFAD-46D9-94B0-2FEE536F483A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6671E7-CFAD-46D9-94B0-2FEE536F483A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6392920-F1A2-44AF-A166-A904DF218A15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6392920-F1A2-44AF-A166-A904DF218A15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6392920-F1A2-44AF-A166-A904DF218A15}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{B6392920-F1A2-44AF-A166-A904DF218A15}.RegenCodeFiles|Any CPU.Build.0 = RegenCodeFiles|Any CPU
+		{B6392920-F1A2-44AF-A166-A904DF218A15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6392920-F1A2-44AF-A166-A904DF218A15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97787A93-0604-42CC-8A87-EE6E5DCE74FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97787A93-0604-42CC-8A87-EE6E5DCE74FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97787A93-0604-42CC-8A87-EE6E5DCE74FD}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{97787A93-0604-42CC-8A87-EE6E5DCE74FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97787A93-0604-42CC-8A87-EE6E5DCE74FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1F2C401-1DCF-4803-BD82-8BC328204B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1F2C401-1DCF-4803-BD82-8BC328204B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1F2C401-1DCF-4803-BD82-8BC328204B08}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{E1F2C401-1DCF-4803-BD82-8BC328204B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1F2C401-1DCF-4803-BD82-8BC328204B08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.RegenCodeFiles|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E8C02C-6CA9-4386-B51B-15E643966433}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E8C02C-6CA9-4386-B51B-15E643966433}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E8C02C-6CA9-4386-B51B-15E643966433}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{33E8C02C-6CA9-4386-B51B-15E643966433}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E8C02C-6CA9-4386-B51B-15E643966433}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A40FE2-75AD-4773-94DE-78BA26724CA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A40FE2-75AD-4773-94DE-78BA26724CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A40FE2-75AD-4773-94DE-78BA26724CA2}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{A1A40FE2-75AD-4773-94DE-78BA26724CA2}.RegenCodeFiles|Any CPU.Build.0 = RegenCodeFiles|Any CPU
+		{A1A40FE2-75AD-4773-94DE-78BA26724CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A40FE2-75AD-4773-94DE-78BA26724CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF8251A-12CD-4EAD-98B5-DF5D971DEEEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF8251A-12CD-4EAD-98B5-DF5D971DEEEA}.RegenCodeFiles|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF8251A-12CD-4EAD-98B5-DF5D971DEEEA}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD552B2-23D5-4096-9901-CACC78188426}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDD552B2-23D5-4096-9901-CACC78188426}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDD552B2-23D5-4096-9901-CACC78188426}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
+		{CDD552B2-23D5-4096-9901-CACC78188426}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDD552B2-23D5-4096-9901-CACC78188426}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90} = {CDCEFE2E-C0F5-4E16-8E66-6DB496A5EDA5}
+		{B6392920-F1A2-44AF-A166-A904DF218A15} = {0DB980DC-BC93-4AD5-A88F-8DF03B6C2141}
+		{97787A93-0604-42CC-8A87-EE6E5DCE74FD} = {0DB980DC-BC93-4AD5-A88F-8DF03B6C2141}
+		{E1F2C401-1DCF-4803-BD82-8BC328204B08} = {84C92EF8-8279-4A18-8750-8D9B1362E0A2}
+		{6CAFC0C6-A428-4D30-A9F9-700E829FEA51} = {A672A603-F35F-4824-BCE9-943B46136D93}
+		{33E8C02C-6CA9-4386-B51B-15E643966433} = {53A8D01F-45C4-4A31-9C4F-CC79552A084C}
+		{A1A40FE2-75AD-4773-94DE-78BA26724CA2} = {53A8D01F-45C4-4A31-9C4F-CC79552A084C}
+		{AAF8251A-12CD-4EAD-98B5-DF5D971DEEEA} = {4AF502E0-96A6-4C2A-BD4A-540F5E0119B9}
+		{CDD552B2-23D5-4096-9901-CACC78188426} = {0DB980DC-BC93-4AD5-A88F-8DF03B6C2141}
+	EndGlobalSection
+EndGlobal
