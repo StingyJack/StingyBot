@@ -153,7 +153,7 @@ nuget.exe
 **/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
-!**/packages/StingyJunk.Analyzers.1.0.6219.35507/
+!**/packages/stingypack/StingyJunk.Analyzers.1.0.6219.35507.nupkg
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
 # NuGet v3's project.json files produces more ignoreable files
@@ -242,7 +242,9 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
-/ForceBot/appSettings.config
+
+
+/StingyBot/appSettings.config
 *.secrets
 *.scriptylog
 *.debuglog
