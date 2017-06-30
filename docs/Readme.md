@@ -36,9 +36,10 @@ More info on planned items in the [worklist readme](Readme-WorkList.md)
 
 ## Working with the code
 
-**VERY IMPORTANT** - The System.Net.Http assembly that comes along with NETStandard 1.6 breaks most of the WebApi
+~~**VERY IMPORTANT** - The System.Net.Http assembly that comes along with NETStandard 1.6 breaks most of the WebApi
 and other calls (tfs, etc). Don't update the existing nuget packages without ensuring things arent 
-wildly broken.  See https://github.com/dotnet/corefx/issues/11100 for more info. 
+wildly broken.  See https://github.com/dotnet/corefx/issues/11100 for more info.~~  
+All fixed. only took a few months.
 
 **less important** - handlers are intended to be loaded dynamically, by configuration.    
 
