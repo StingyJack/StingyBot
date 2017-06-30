@@ -153,7 +153,7 @@ nuget.exe
 **/packages/*
 # except build/, which is used as an MSBuild target.
 !**/packages/build/
-!**/packages/stingypack/StingyJunk.Analyzers.1.0.6219.35507.nupkg
+
 # Uncomment if necessary however generally it will be regenerated when needed
 #!**/packages/repositories.config
 # NuGet v3's project.json files produces more ignoreable files
@@ -249,3 +249,4 @@ ModelManifest.xml
 *.scriptylog
 *.debuglog
 *.failedGenLog
+!**/.nuget/stingypack/StingyJunk.Analyzers.1.0.6219.35507.nupkg
