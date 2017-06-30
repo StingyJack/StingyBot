@@ -19,8 +19,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Packaging", "_Packaging", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HandlerExtensions", "HandlerExtensions", "{0DB980DC-BC93-4AD5-A88F-8DF03B6C2141}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Configuration.MsOverride", "src\StingyBot.Configuration.MsOverride\StingyBot.Configuration.MsOverride.csproj", "{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Common", "src\StingyBot.Common\StingyBot.Common.csproj", "{7A00D062-442C-49CD-808A-0497A2B1CED9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Bot", "src\StingyBot.Bot\StingyBot.Bot.csproj", "{8E6671E7-CFAD-46D9-94B0-2FEE536F483A}"
@@ -36,8 +34,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Tests.Integration", "src\StingyBot.Tests.Integration\StingyBot.Tests.Integration.csproj", "{33E8C02C-6CA9-4386-B51B-15E643966433}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StingyBot.Common.Tests", "src\StingyBot.Common.Tests\StingyBot.Common.Tests.csproj", "{A1A40FE2-75AD-4773-94DE-78BA26724CA2}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventuallyToBeRemoved", "EventuallyToBeRemoved", "{CDCEFE2E-C0F5-4E16-8E66-6DB496A5EDA5}"
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "docs", "docs\", "{AAF8251A-12CD-4EAD-98B5-DF5D971DEEEA}"
 	ProjectSection(WebsiteProperties) = preProject
@@ -77,12 +73,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
-		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.RegenCodeFiles|Any CPU.Build.0 = RegenCodeFiles|Any CPU
-		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7A00D062-442C-49CD-808A-0497A2B1CED9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7A00D062-442C-49CD-808A-0497A2B1CED9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A00D062-442C-49CD-808A-0497A2B1CED9}.RegenCodeFiles|Any CPU.ActiveCfg = RegenCodeFiles|Any CPU
@@ -139,7 +129,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{B0EF94B0-EBF9-4BE1-B953-A9BDB141BA90} = {CDCEFE2E-C0F5-4E16-8E66-6DB496A5EDA5}
 		{B6392920-F1A2-44AF-A166-A904DF218A15} = {0DB980DC-BC93-4AD5-A88F-8DF03B6C2141}
 		{97787A93-0604-42CC-8A87-EE6E5DCE74FD} = {0DB980DC-BC93-4AD5-A88F-8DF03B6C2141}
 		{E1F2C401-1DCF-4803-BD82-8BC328204B08} = {84C92EF8-8279-4A18-8750-8D9B1362E0A2}
