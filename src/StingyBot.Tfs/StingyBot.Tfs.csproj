@@ -271,8 +271,8 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetDir)$(TargetName).*" "$(SolutionDir)src\ConsoleHost\bin\$(ConfigurationName)"
-copy "$(TargetDir)Microsoft.*.*" "$(SolutionDir)src\ConsoleHost\bin\$(ConfigurationName)"</PostBuildEvent>
+    <PostBuildEvent>REM copy "$(TargetDir)$(TargetName).*" "$(SolutionDir)src\ConsoleHost\bin\$(ConfigurationName)"
+REM copy "$(TargetDir)Microsoft.*.*" "$(SolutionDir)src\ConsoleHost\bin\$(ConfigurationName)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
