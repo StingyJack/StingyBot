@@ -16,15 +16,15 @@
     public class SimplifiedSentence
     {
         #region "data members and consts"
-        
+
         private readonly List<LexedValue> _sentenceAsLexedValues;
 
-        public string OriginalSentence { get; private set; }
+        public string OriginalSentence { get; }
 
-        public string Sentence { get; private set; }
+        public string Sentence { get; }
 
-        public ReadOnlyCollection<LexedValue> SentenceAsLexedValues { get; private set; }
-        
+        public ReadOnlyCollection<LexedValue> SentenceAsLexedValues { get; }
+
         #endregion //#region "data members and consts"
 
         #region "ctor"
@@ -34,7 +34,7 @@
         /// <param name="candidateSentence"></param>
         /// <param name="tokenizedSentence"></param>
         /// <param name="sentenceAsLexedValues"></param>
-        public SimplifiedSentence(string candidateSentence, string tokenizedSentence, List<LexedValue> sentenceAsLexedValues )
+        public SimplifiedSentence(string candidateSentence, string tokenizedSentence, List<LexedValue> sentenceAsLexedValues)
         {
             _sentenceAsLexedValues = sentenceAsLexedValues;
             SentenceAsLexedValues = new ReadOnlyCollection<LexedValue>(_sentenceAsLexedValues);
@@ -46,19 +46,14 @@
 
         #region "private members"
 
-     
-       
-
-       
-
         #endregion //#region "private members"
 
         #region "public members"
 
         public int GetIndexOfKnownToken(string tokenName)
         {
-            var lexValue = _sentenceAsLexedValues.FirstOrDefault(l => l.HasToken 
-                && l.SemanticReplacementToken.CoalescedReplacement.Equals(tokenName, StringComparison.OrdinalIgnoreCase));
+            var lexValue = _sentenceAsLexedValues.FirstOrDefault(l => l.HasToken
+                                                                      && l.SemanticReplacementToken.CoalescedReplacement.Equals(tokenName, StringComparison.OrdinalIgnoreCase));
 
             return lexValue == null ? -1 : lexValue.IndexInCollection;
         }
@@ -84,7 +79,7 @@
 
             return currentMatchCondition >= minMatchCondition;
         }
-        
+
         public int GetCountOfMatchingTokens(List<string> tokenNames)
         {
             var matchCount = 0;

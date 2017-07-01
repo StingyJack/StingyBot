@@ -21,7 +21,7 @@
         private const int MAX_CASES_TO_SHOW = 5;
 
         private CaseMessageFormatter _caseMessageFormatter;
-       
+
         #region "public interface members"
 
         public void Configure(IConfigurationRoot configRoot)
@@ -50,7 +50,7 @@
             {
                 return GetCaseListAsync(messageContext);
             }
-            if (messageContext.Sentence.EvaluateSpecificTokenNamesMatch(LexiTokenMatch.All, new List<string> { Consts.TOKEN_CASE}))
+            if (messageContext.Sentence.EvaluateSpecificTokenNamesMatch(LexiTokenMatch.All, new List<string> {Consts.TOKEN_CASE}))
             {
                 return GetCaseDetailsAsync(messageContext);
             }
@@ -105,22 +105,21 @@
 
             if (result.Records.Count == 0)
             {
-                return new Message { Text = $"records not found for case {caseNumber}" };
+                return new Message {Text = $"records not found for case {caseNumber}"};
             }
             if (result.Records.Count > 1)
             {
                 var matchingCaseNumbers = string.Join(",", result.Records.Select(c => c.CaseNumber));
-                return new Message { Text = $"Multiple records found {matchingCaseNumbers}" };
+                return new Message {Text = $"Multiple records found {matchingCaseNumbers}"};
             }
-            
+
             var sfCase = result.Records.First();
-            
+
             return _caseMessageFormatter.GetCaseMessage(sfCase);
         }
 
         public async Task<Message> GetCaseListAsync(MessageContext messageContext)
         {
-
             var caseQuery = "SELECT Id, CaseNumber, Subject, Description, CreatedDate, OwnerId, LastModifiedDate, IsClosed, Priority " +
                             " , Account.Name " +
                             " FROM Case " +
@@ -133,7 +132,7 @@
             if (result.Records.Count == 0)
             {
                 //TODO: move to messsage formatter
-                return new Message { Text = "Case records not found" };
+                return new Message {Text = "Case records not found"};
             }
 
             //TODO: move to message formatter
@@ -152,7 +151,7 @@
             var casesMessage = new Message
             {
                 Text = headerText,
-                Attachments = new List<SlackAttachment> { att }
+                Attachments = new List<SlackAttachment> {att}
             };
 
             var currentCount = 1;

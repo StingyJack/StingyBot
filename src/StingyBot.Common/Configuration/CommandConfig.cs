@@ -1,5 +1,4 @@
-﻿// ReSharper disable ClassNeverInstantiated.Global
-namespace StingyBot.Common.Configuration
+﻿namespace StingyBot.Common.Configuration
 {
     using System;
     using System.Collections.Generic;

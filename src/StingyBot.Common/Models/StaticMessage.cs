@@ -5,6 +5,5 @@
         public string Culture { get; set; }
 
         public Message Message { get; set; }
-
     }
 }

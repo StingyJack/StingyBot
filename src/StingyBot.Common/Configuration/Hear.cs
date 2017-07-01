@@ -1,6 +1,4 @@
-﻿// ReSharper disable CollectionNeverUpdated.Global
-// ReSharper disable UnusedAutoPropertyAccessor.Global
-namespace StingyBot.Common.Configuration
+﻿namespace StingyBot.Common.Configuration
 {
     using System;
     using System.Collections.Generic;
@@ -12,17 +10,13 @@ namespace StingyBot.Common.Configuration
     [Serializable]
     public class Hear
     {
-        
-       // private IMessageHandler _ConfiguredMessageHandler;
+        // private IMessageHandler _ConfiguredMessageHandler;
 
-        [NonSerialized]
-        private ICommandHandler _configuredCommandHandler;
+        [NonSerialized] private ICommandHandler _configuredCommandHandler;
 
-        [NonSerialized]
-        private IStaticTextResponseHandler _configuredStaticTextResponseHandler;
+        [NonSerialized] private IStaticTextResponseHandler _configuredStaticTextResponseHandler;
 
-        [NonSerialized]
-        private ILexAndParseEngine _lexAndParseEngine;
+        [NonSerialized] private ILexAndParseEngine _lexAndParseEngine;
 
         public string Name { get; set; }
         public bool Enabled { get; set; }
@@ -73,12 +67,14 @@ namespace StingyBot.Common.Configuration
         }
 
         [JsonIgnore]
-        public bool HasSemanticTokens { get { return SemanticReplacementTokens != null && SemanticReplacementTokens.Count > 0; }  }
+        public bool HasSemanticTokens
+        {
+            get { return SemanticReplacementTokens != null && SemanticReplacementTokens.Count > 0; }
+        }
 
         public List<string> GetTokenNames()
         {
             return SemanticReplacementTokens?.Select(s => s.CoalescedReplacement).ToList();
         }
-
     }
 }

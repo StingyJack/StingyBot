@@ -5,7 +5,7 @@
     using System.Linq;
     using Configuration;
 
-    public static class MatchEvaluator 
+    public static class MatchEvaluator
     {
         public static MatchResult EvaluateMatches(List<Hear> hears, string incomingMessageText)
         {
@@ -24,7 +24,7 @@
 
                 var matchCount = sentence.GetCountOfMatchingTokens(hearTokenNames);
 
-                var hms = new MatchScore { Hear = hear, Sentence = sentence };
+                var hms = new MatchScore {Hear = hear, Sentence = sentence};
 
                 if (hearTokenNames.Count == matchCount)
                 {
@@ -42,7 +42,6 @@
                 }
 
                 handlerMatchScores.Add(hms);
-
             }
 
             if (incomingMessageText.IndexOf("help", StringComparison.OrdinalIgnoreCase) >= 0)
@@ -66,7 +65,8 @@
             else
             {
                 var bestMatch = handlerMatchScores.OrderBy(h => h.Hear.EvaluationPriority)
-                    .ThenByDescending(h => h.Score).First();
+                    .ThenByDescending(h => h.Score)
+                    .First();
                 bestMatchingHear = bestMatch.Hear;
                 bestMatchingSentence = bestMatch.Sentence;
             }

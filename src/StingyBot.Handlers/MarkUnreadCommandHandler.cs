@@ -1,5 +1,4 @@
-﻿// ReSharper disable UnusedMember.Global
-namespace StingyBot.Handlers
+﻿namespace StingyBot.Handlers
 {
     using System;
     using System.Threading.Tasks;
@@ -39,9 +38,6 @@ namespace StingyBot.Handlers
 
         public void Dispose()
         {
-            
         }
-
-    
     }
 }

@@ -11,13 +11,13 @@
         /// <remarks>
         ///     A OrderedDictionary[T] would have been nice
         /// </remarks>
-        public int  IndexInCollection { get; set; }
+        public int IndexInCollection { get; set; }
 
         /// <summary>
         ///     The index from the original string
         /// </summary>
         public int IndexInOriginalString { get; set; }
-        
+
         /// <summary>
         ///     The token matched to this entry
         /// </summary>

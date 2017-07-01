@@ -1,6 +1,5 @@
 ﻿namespace StingyBot.Common.Nlp
 {
-
     public enum LexiTokenMatch
     {
         None = 0,
@@ -8,9 +7,8 @@
         All = 2
     }
 
- 
 
-/// <summary>
+    /// <summary>
     ///     How strongly was the token mentioned
     /// </summary>
     /// <example>
@@ -24,5 +22,4 @@
         Light = 1,
         Strong = 2
     }
-
 }

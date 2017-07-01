@@ -15,13 +15,14 @@
             "author_icon": null,
             "title": null,
             "title_link": null,
-            "text": "*case* _#####_ - Displays details for a salesforce case \n`case list` - Displays the last 5 cases n *tfs wi* _#####_ - Displays details for a TFS workitem \n*tfs wiql* \"_SELECT System.ID FROM WorkItems\" - Displays details for a TFS workitem \n",
+            "text":
+              "*case* _#####_ - Displays details for a salesforce case \n`case list` - Displays the last 5 cases n *tfs wi* _#####_ - Displays details for a TFS workitem \n*tfs wiql* \"_SELECT System.ID FROM WorkItems\" - Displays details for a TFS workitem \n",
             "fields": [],
             "callback_id": null,
             "actions": null,
             "image_url": null,
             "thumb_url": null,
-            "mrkdwn_in": [ "fields", "pretext", "text" ]
+            "mrkdwn_in": ["fields", "pretext", "text"]
           },
           {
             "fallback": "not yet known commands",
@@ -38,7 +39,7 @@
             "actions": null,
             "image_url": null,
             "thumb_url": null,
-            "mrkdwn_in": [ "fields", "pretext", "text" ]
+            "mrkdwn_in": ["fields", "pretext", "text"]
           }
         ]
       }

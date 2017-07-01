@@ -2,12 +2,13 @@
 {
     using System;
     using System.Diagnostics.CodeAnalysis;
+    using System.Reflection;
     using log4net;
 
     [SuppressMessage("ReSharper", "VirtualMemberNeverOverridden.Global")]
     public abstract class LoggableBase
     {
-        private static ILog _log = LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static ILog _log = LogManager.GetLogger(MethodBase.GetCurrentMethod().DeclaringType);
 
         protected virtual void ReinitializeLogger(ILog nonDefaultLogImpelementation)
         {

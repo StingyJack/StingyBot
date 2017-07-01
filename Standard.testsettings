@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <TestSettings name="Standard" id="72c54d01-7689-418b-b7dc-7719a20aa00b" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
   <Description>These are default test settings for a local test run.</Description>
   <Deployment enabled="false" />
@@ -10,8 +10,7 @@
         </AssemblyResolution>
       </UnitTestRunConfig>
     </TestTypeSpecific>
-    <AgentRule name="Execution Agents">
-    </AgentRule>
+    <AgentRule name="Execution Agents"></AgentRule>
   </Execution>
   <Properties />
 </TestSettings>

@@ -14,11 +14,11 @@
     /// </summary>
     public class WebHookHost : IDisposable
     {
-        public string ApiName { get; private set; }
-        public string RouteTemplate { get; private set; }
-        public string BaseWebHookAddress { get; private set; }
+        public string ApiName { get; }
+        public string RouteTemplate { get; }
+        public string BaseWebHookAddress { get; }
 
-        public HttpConfiguration HttpConfiguration { get; private set; }
+        public HttpConfiguration HttpConfiguration { get; }
         private IDisposable _webApp;
 
         public WebHookHost(string webHookApiName, string webHookRouteTemplate, string baseWebHookAddress)
@@ -29,9 +29,9 @@
 
             HttpConfiguration = new HttpConfiguration();
             HttpConfiguration.Routes.MapHttpRoute(
-               ApiName,
-               RouteTemplate
-           );
+                ApiName,
+                RouteTemplate
+            );
         }
 
         public void Start()
@@ -40,11 +40,8 @@
             {
                 _webApp.Dispose();
             }
-                      
-            _webApp = WebApp.Start(BaseWebHookAddress, (appBuilder) =>
-            {
-                appBuilder.UseWebApi(HttpConfiguration);
-            });
+
+            _webApp = WebApp.Start(BaseWebHookAddress, appBuilder => { appBuilder.UseWebApi(HttpConfiguration); });
         }
 
         public void Stop()
@@ -56,6 +53,5 @@
         {
             _webApp?.Dispose();
         }
-
     }
 }

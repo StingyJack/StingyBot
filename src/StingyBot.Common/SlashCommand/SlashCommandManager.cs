@@ -19,6 +19,7 @@
         ///     Keyed by h.HandlerDef.CommandConfig.SlashCommand
         /// </summary>
         private readonly OicDic<CommandConfig> _commandConfigs = new OicDic<CommandConfig>();
+
         private readonly OicDic<ICommandHandler> _commandHandlers = new OicDic<ICommandHandler>();
         private readonly WebHookHost _webHookHost;
 
@@ -81,8 +82,8 @@
                     $"There is no handler available for command {postMessage.Command}");
             }
 
-            if (string.Equals(candidateConfig.VerificationToken, 
-                postMessage.Token, StringComparison.OrdinalIgnoreCase) == false)
+            if (string.Equals(candidateConfig.VerificationToken,
+                    postMessage.Token, StringComparison.OrdinalIgnoreCase) == false)
             {
                 return requestMessage.CreateErrorResponse(HttpStatusCode.Unauthorized,
                     $"Presented token does not match. GTFO.");
@@ -98,7 +99,7 @@
 
             //TODO: ICommandHandler needs to accept other parameters or MessageContext needs to have more props.
 
-            var message = await handler.PerformUserCommandAsync(new MessageContext()); 
+            var message = await handler.PerformUserCommandAsync(new MessageContext());
 
             return requestMessage.CreateResponse(HttpStatusCode.OK, message);
         }

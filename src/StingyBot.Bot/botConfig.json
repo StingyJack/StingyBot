@@ -16,20 +16,20 @@
       "semanticReplacementTokens": [
         {
           "coalescedReplacement": "WORKITEM",
-          "sourceWords": [ "wi", "pbi", "bg", "tk" ]
+          "sourceWords": ["wi", "pbi", "bg", "tk"]
         },
         {
           "coalescedReplacement": "WIQL_START",
-          "sourceWords": [ "wiql" ]
+          "sourceWords": ["wiql"]
         },
         {
           "coalescedReplacement": "SEMICOLON",
-          "sourceWords": [ ";" ]
+          "sourceWords": [";"]
         }
       ],
       "handlerDef": {
         "handlerFullTypeName": "StingyBot.Tfs.TfsWorkItemController, StingyBot.Tfs",
-        "configFiles": [ "tfsconfiguration.json", "tfsconfiguration.json.secret" ]
+        "configFiles": ["tfsconfiguration.json", "tfsconfiguration.json.secret"]
       }
     },
     {
@@ -41,17 +41,17 @@
       "semanticReplacementTokens": [
         {
           "coalescedReplacement": "CASE",
-          "sourceWords": [ "case" ]
+          "sourceWords": ["case"]
         },
         {
           "coalescedReplacement": "LIST",
-          "sourceWords": [ "list" ],
+          "sourceWords": ["list"],
           "isRequired": false
         }
       ],
       "handlerDef": {
         "handlerFullTypeName": "StingyBot.SalesForce.SalesForceController, StingyBot.SalesForce",
-        "configFiles": [ "salesforcesettings.json", "salesforcesettings.json.secret" ]
+        "configFiles": ["salesforcesettings.json", "salesforcesettings.json.secret"]
       }
     },
     {
@@ -82,7 +82,7 @@
       "semanticReplacementTokens": [
         {
           "coalescedReplacement": "DOCS",
-          "sourceWords": [ "docs" ]
+          "sourceWords": ["docs"]
         }
       ],
       "handlerDef": {
@@ -106,7 +106,7 @@
   "backgroundTaskHandlerDefs": [
     {
       "handlerFullTypeName": "StingyBot.Handlers.TeaTimeBackgroundTaskHandler, StingyBot.Handlers",
-      "configFiles": [ "teaTimeConfig.json" ]
+      "configFiles": ["teaTimeConfig.json"]
     }
   ]
 }

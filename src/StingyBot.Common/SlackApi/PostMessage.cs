@@ -36,8 +36,8 @@
             UserName = requestData["user_name"];
             Text = requestData["text"];
             TriggerWord = requestData["trigger_word"];
-            ResponseUrl= requestData["response_url"];
-            Command= requestData["command"];
+            ResponseUrl = requestData["response_url"];
+            Command = requestData["command"];
         }
     }
 }

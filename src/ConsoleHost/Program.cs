@@ -1,5 +1,4 @@
-﻿// ReSharper disable ClassNeverInstantiated.Global
-namespace StingyBot.ConsoleHost
+﻿namespace StingyBot.ConsoleHost
 {
     using System;
     using System.Diagnostics;

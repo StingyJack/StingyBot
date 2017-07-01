@@ -5,8 +5,8 @@
 
     public partial class MethodExecutor
     {
-        private string _slackBaseUrl;
-        private string _slackApiKey;
+        private readonly string _slackBaseUrl;
+        private readonly string _slackApiKey;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MethodExecutor" /> class.
@@ -29,7 +29,7 @@
             var url = $"{_slackBaseUrl}{apiRequestParams.GetMethodName()}";
             if (string.IsNullOrWhiteSpace(apiRequestParams.ApiToken)) { apiRequestParams.ApiToken = _slackApiKey; }
 
-            var nvc = apiRequestParams.GetParams();            
+            var nvc = apiRequestParams.GetParams();
             string responseText;
             using (var client = new WebClient())
             {
@@ -41,7 +41,7 @@
             return MethodResponseBase.Parse(responseText);
         }
 
-        public T Execute<T>(ApiRequestParams apiRequestParams) where T:MethodResponseBase
+        public T Execute<T>(ApiRequestParams apiRequestParams) where T : MethodResponseBase
         {
             var url = $"{_slackBaseUrl}{apiRequestParams.GetMethodName()}";
             if (string.IsNullOrWhiteSpace(apiRequestParams.ApiToken)) { apiRequestParams.ApiToken = _slackApiKey; }
@@ -56,9 +56,8 @@
             }
 
             var response = MethodResponseBase.Parse<T>(responseText);
-            
+
             return response;
         }
-
     }
 }

@@ -11,8 +11,8 @@
     using Common.Models;
     using Common.Nlp;
     using Common.SlashCommand;
-    using Microsoft.Extensions.Configuration;
     using log4net;
+    using Microsoft.Extensions.Configuration;
     using SlackConnector;
     using SlackConnector.Models;
 
@@ -73,11 +73,11 @@
                 configs.Add(hear.Name, builtConfig);
             }
 
-            foreach (var backgroundTask in _BotConfig.BackgroundTaskHandlerDefs.Where(h => h.ConfigFiles != null 
-                                                                                        && h.ConfigFiles.Length > 0))
+            foreach (var backgroundTask in _BotConfig.BackgroundTaskHandlerDefs.Where(h => h.ConfigFiles != null
+                                                                                           && h.ConfigFiles.Length > 0))
             {
                 var settingsBuilder = new ConfigurationBuilder()
-                  .SetBasePath(Environment.CurrentDirectory);
+                    .SetBasePath(Environment.CurrentDirectory);
 
                 foreach (var configFile in backgroundTask.ConfigFiles)
                 {
@@ -139,7 +139,6 @@
             {
                 _BotConfig.RequiresExternalWebHookAccess = true;
             }
-
         }
 
         protected virtual void SetBotConfig(IConfigurationRoot botConfigurationRoot)
@@ -225,7 +224,7 @@
                         if (stHandler == null)
                         {
                             throw new InvalidOperationException(
-                               $"Command Handler {messageHandlerDef.HandlerFullTypeName} does not implement {nameof(ICommandHandler)}");
+                                $"Command Handler {messageHandlerDef.HandlerFullTypeName} does not implement {nameof(ICommandHandler)}");
                         }
                         stHandler.Configure(hear.HandlerDef.MessageFile);
                         hear.ConfiguredStaticTextResponseHandler = stHandler;
@@ -270,8 +269,8 @@
 
                 if (_Configurations.ContainsKey(handlerDef.HandlerFullTypeName))
                 {
-                    var config = _Configurations[handlerDef.HandlerFullTypeName]; 
-                    backgroundTask.Configure(config); 
+                    var config = _Configurations[handlerDef.HandlerFullTypeName];
+                    backgroundTask.Configure(config);
                 }
                 _BackgroundTaskHandlers.Add(backgroundTask);
             }
@@ -379,14 +378,13 @@
                 return;
             }
             LogInfo("Disconnected");
-
         }
 
         private Task OnMessageReceived(SlackMessage message)
         {
             LogDebug("Message Received");
 
-            var msg = new Message { Text = message.Text, ChatHub = message.ChatHub };
+            var msg = new Message {Text = message.Text, ChatHub = message.ChatHub};
 
             var response = _IncomingMessagesRouter.ProcessIncomingMessageAsync(msg).GetAwaiter().GetResult();
             if (response == null)

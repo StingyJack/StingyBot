@@ -21,9 +21,9 @@
     public class LexAndParseEngine : LoggableBase, ILexAndParseEngine
     {
         #region "props / felds"
-        
-        public List<SemanticReplacementToken> SemanticReplacementTokens { get; private set; } = new List<SemanticReplacementToken>();
-        
+
+        public List<SemanticReplacementToken> SemanticReplacementTokens { get; } = new List<SemanticReplacementToken>();
+
         #endregion //#region "props / felds"
 
         #region "ctor"
@@ -44,7 +44,7 @@
         {
             if (SemanticReplacementTokens.Any(s => s.CoalescedReplacement.Equals(semanticReplacementToken.CoalescedReplacement, StringComparison.OrdinalIgnoreCase)))
             {
-                return;    //not sure if ex is warranted
+                return; //not sure if ex is warranted
             }
             SemanticReplacementTokens.Add(semanticReplacementToken);
         }
@@ -74,7 +74,7 @@
             var index = 0;
             foreach (var splitSourceWord in splits)
             {
-                var lexedValue = new LexedValue {IndexInCollection = index, Value = splitSourceWord };
+                var lexedValue = new LexedValue {IndexInCollection = index, Value = splitSourceWord};
                 var replacementToken = GetReplacementToken(splitSourceWord);
                 if (replacementToken != null)
                 {

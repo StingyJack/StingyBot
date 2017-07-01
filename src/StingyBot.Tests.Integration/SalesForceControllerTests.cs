@@ -35,7 +35,6 @@
 
         private SalesForceController GetSalesForceController()
         {
-
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Environment.CurrentDirectory)
                 .AddJsonFile("salesforcesettings.json", true, true)
@@ -74,4 +73,3 @@
         }
     }
 }
-

@@ -6,7 +6,6 @@
     using log4net;
     using Microsoft.Extensions.Configuration;
 
-
     public interface IPluggableBot
     {
         /// <summary>

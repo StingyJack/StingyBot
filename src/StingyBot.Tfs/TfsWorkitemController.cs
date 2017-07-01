@@ -15,7 +15,7 @@
     public class TfsWorkitemController : ConnectedBase, IMessageHandler
     {
         #region "props and fields"
-        
+
         private WorkitemMessageFormatter _workitemMessageFormatter;
 
         #endregion //#region "props and fields"
@@ -28,15 +28,15 @@
 
             _workitemMessageFormatter = new WorkitemMessageFormatter();
         }
-        
+
         public async Task<Message> AcceptUserInputAsync(MessageContext messageContext)
         {
             //figure out what function this needs to perform
-            if (messageContext.Sentence.EvaluateSpecificTokenNamesMatch(LexiTokenMatch.All, new List<string> { Consts.TOKEN_WORKITEM }))
+            if (messageContext.Sentence.EvaluateSpecificTokenNamesMatch(LexiTokenMatch.All, new List<string> {Consts.TOKEN_WORKITEM}))
             {
                 return await GetSingleWorkitemDetailByIdAsync(messageContext);
             }
-            if (messageContext.Sentence.EvaluateSpecificTokenNamesMatch(LexiTokenMatch.All, new List<string> { Consts.TOKEN_WIQL }))
+            if (messageContext.Sentence.EvaluateSpecificTokenNamesMatch(LexiTokenMatch.All, new List<string> {Consts.TOKEN_WIQL}))
             {
                 return await GetWorkitemDetailsByWiqlQueryAsync(messageContext);
             }
@@ -44,12 +44,12 @@
         }
 
         #endregion //#region "public interface members"
-        
+
         #region "workitem handling"
 
         //pulll in remaining items, add formatter/transformer for messages
         //then work out intents
-       
+
         private async Task<Message> GetSingleWorkitemDetailByIdAsync(MessageContext messageContext)
         {
             //assumes workitem id follows the workitem token.
@@ -79,7 +79,7 @@
                 return new Message {Text = "Learn to query scrub"};
             }
 
-            var result = await witClient.QueryByWiqlAsync(new Wiql { Query = wiql }, mostLikelyTeamProject.TeamProjectRef.Name);
+            var result = await witClient.QueryByWiqlAsync(new Wiql {Query = wiql}, mostLikelyTeamProject.TeamProjectRef.Name);
             if (result.WorkItems.Any() == false)
             {
                 return _workitemMessageFormatter.GetNoWorkitemsFoundForQuery();
@@ -95,7 +95,9 @@
             var sentence = messageContext.Sentence;
 
             var wiqlToken = sentence.SentenceAsLexedValues.FirstOrDefault(w => w.HasToken
-                && w.SemanticReplacementToken.CoalescedReplacement.Equals(Consts.TOKEN_WIQL, StringComparison.OrdinalIgnoreCase));
+                                                                               &&
+                                                                               w.SemanticReplacementToken.CoalescedReplacement.Equals(Consts.TOKEN_WIQL,
+                                                                                   StringComparison.OrdinalIgnoreCase));
             if (wiqlToken == null)
             {
                 return null;
@@ -135,7 +137,7 @@
         #endregion //#region "workitem handling"
 
         #region "utils"
-            
+
         public void Dispose()
         {
             //nothing unmanaged to dispose for this.

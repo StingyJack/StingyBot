@@ -25,15 +25,15 @@
             var status = GetWiField(workitem, "System.State");
             var summary = GetWiField(workitem, "Microsoft.VSTS.TCM.ReproSteps");
             var message = new Message
-                          {
-                              Text = $"{workitemType} - {workitem.Id} - {workitemUrl} \n"
-                              + $" *Title*: {title} \n"
-                              + $" *Status*: {status}     \n"
-                              + $" *Summary*: {summary} \n\n"
-                              + $" *Last Update*: \n",
-                              Attachments = new List<SlackAttachment>()
-                          };
-            
+            {
+                Text = $"{workitemType} - {workitem.Id} - {workitemUrl} \n"
+                       + $" *Title*: {title} \n"
+                       + $" *Status*: {status}     \n"
+                       + $" *Summary*: {summary} \n\n"
+                       + $" *Last Update*: \n",
+                Attachments = new List<SlackAttachment>()
+            };
+
 
             return message;
         }
@@ -54,7 +54,6 @@
 
         protected internal Message GetWorkitemsQueryResult(List<WorkItem> workitems, WorkItemQueryResult queryResult)
         {
-
             /*
             var recordsToShow = workitems.Count > _TfsConfiguration.MaxRecordsInResultSets
                 ? _TfsConfiguration.MaxRecordsInResultSets

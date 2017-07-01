@@ -25,8 +25,7 @@
 
         private string RegisterApiKey(string apiKey, bool saveApiKeyForFutureConnections)
         {
-            
-            if (saveApiKeyForFutureConnections 
+            if (saveApiKeyForFutureConnections
                 && string.IsNullOrWhiteSpace(apiKey) == true)
             {
                 throw new ArgumentNullException(nameof(apiKey), "cant save null or empty api key for future connections");
@@ -52,6 +51,5 @@
         {
             return new MethodExecutor(_slackApiKey);
         }
-        
     }
 }

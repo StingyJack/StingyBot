@@ -17,7 +17,7 @@
         public List<Hear> Hears { get; set; } = new List<Hear>();
 
         public List<Knows> Knows { get; set; } = new List<Knows>();
-        
+
         public bool? RequiresExternalWebHookAccess { get; set; }
 
         public List<HandlerDef> BackgroundTaskHandlerDefs { get; set; }
@@ -37,6 +37,5 @@
 
             return returnValue;
         }
-
     }
 }

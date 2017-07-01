@@ -1,5 +1,4 @@
-﻿// ReSharper disable once UnusedMember.Global
-namespace StingyBot.Common.Configuration
+﻿namespace StingyBot.Common.Configuration
 {
     using System;
 

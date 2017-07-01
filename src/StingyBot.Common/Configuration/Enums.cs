@@ -8,16 +8,19 @@
         ///     No handler type defined
         /// </summary>
         Unknown,
+
         /// <summary>
         ///     Handles user initiated messages, usually triggered by type <see cref="TriggerType.DirectMention"/>
         ///     Expected to be handled by an implementer of <see cref="IMessageHandler"/>
         /// </summary>
         MessageHandler,
+
         /// <summary>
         ///     Handles user initiated messages, usually triggered by type <see cref="TriggerType.DirectMention"/>
         ///     Expects to return a static response.
         /// </summary>
         StaticResponse,
+
         /// <summary>
         ///     Handles user initiated slash comands, usually triggered by type <see cref="TriggerType.SlashCommand"/>
         ///     Expected to be handled by an implementer of <see cref="ICommandHandler"/>
@@ -31,6 +34,7 @@
         ///     Not defined
         /// </summary>
         Unknown,
+
         /// <summary>
         ///     Directly mentioning the bot name in the message.
         /// </summary>
@@ -38,11 +42,11 @@
         ///      "@botname do something"
         /// </example>
         DirectMention,
-      
+
         /// <summary>
         ///     Trigger
         /// </summary>
-		SlashCommand, 
+        SlashCommand,
 
         // <summary>
         //     Ambient reference match to a phrase.
@@ -58,7 +62,5 @@
         /// etc.
         /// </summary>
         BackgroundTask
-
     }
-
 }

@@ -3,7 +3,7 @@
     using System.Threading.Tasks;
     using Microsoft.Extensions.Configuration;
     using Models;
-    
+
     /// <summary>
     ///     The message handler interface
     /// </summary>

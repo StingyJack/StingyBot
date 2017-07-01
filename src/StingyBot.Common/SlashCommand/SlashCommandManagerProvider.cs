@@ -7,7 +7,7 @@
     public static class SlashCommandManagerProvider
     {
         private static SlashCommandManager _instance;
-        
+
         public static void SetInstance(SlashCommandManager manager)
         {
             if (manager == null)

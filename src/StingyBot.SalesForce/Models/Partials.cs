@@ -22,12 +22,10 @@
         //public string CreatorName { get; set; }
         //public string CreatorSmallPhotoUrl { get; set; }
         public string IsDeleted { get; set; }
+
         public string IsPublished { get; set; }
         public string ParentId { get; set; }
         public string CreatedById { get; set; }
         public string CommentBody { get; set; }
     }
-
-
-
 }

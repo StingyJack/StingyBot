@@ -1,7 +1,7 @@
 ﻿namespace StingyBot.Common.HandlerInterfaces
 {
     using Microsoft.Extensions.Configuration;
-    
+
     /// <summary>
     ///     A background task 
     /// </summary>

@@ -1,5 +1,4 @@
-﻿// ReSharper disable UnusedMember.Global
-namespace StingyBot.Tfs
+﻿namespace StingyBot.Tfs
 {
     using System;
     using System.Collections.Generic;
@@ -10,7 +9,6 @@ namespace StingyBot.Tfs
 
     public class MetadataProvider : ConnectedBase
     {
-
         /// <summary>
         ///     Creates an instance and builds the known elements collection immediately 
         /// </summary>
@@ -64,6 +62,5 @@ namespace StingyBot.Tfs
 
             return returnValue;
         }
-
     }
 }

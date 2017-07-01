@@ -1,5 +1,4 @@
-﻿// ReSharper disable UnusedMember.Global
-namespace StingyBot.Handlers
+﻿namespace StingyBot.Handlers
 {
     using System;
     using System.Threading;
@@ -55,7 +54,7 @@ namespace StingyBot.Handlers
                 if (_teaTime.HasValue && now >= _teaTime.Value)
                 {
                     var botConnect = GetNewSlackConnectionAsync().GetAwaiter().GetResult();
-                    botConnect.Say(new BotMessage { Text = "High Tea must begin!" });
+                    botConnect.Say(new BotMessage {Text = "High Tea must begin!"});
                     _teaTime = null;
                 }
                 Thread.Sleep(SLEEP_TIME);

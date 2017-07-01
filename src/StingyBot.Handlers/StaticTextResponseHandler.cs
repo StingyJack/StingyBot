@@ -1,5 +1,4 @@
-﻿// ReSharper disable UnusedMember.Global
-namespace StingyBot.Handlers
+﻿namespace StingyBot.Handlers
 {
     using System;
     using System.IO;
@@ -14,7 +13,7 @@ namespace StingyBot.Handlers
     {
         //add stuff for loading message from file on disk
         protected string _FileName;
-        
+
         public void Configure(string messageFile)
         {
             _FileName = messageFile;
@@ -41,7 +40,7 @@ namespace StingyBot.Handlers
             catch (Exception ex)
             {
                 LogErr("Couldn't load file as message", ex);
-                return new Message {Text="Couldnt load the message from disk."};
+                return new Message {Text = "Couldnt load the message from disk."};
             }
         }
 

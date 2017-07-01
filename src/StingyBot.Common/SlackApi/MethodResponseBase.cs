@@ -18,7 +18,7 @@
             return null;
         }
 
-        public static T Parse<T>(string responseJson) where T: MethodResponseBase
+        public static T Parse<T>(string responseJson) where T : MethodResponseBase
         {
             try
             {
@@ -36,6 +36,5 @@
         public string Warning { get; set; }
 
         public string Error { get; set; }
-        
     }
 }

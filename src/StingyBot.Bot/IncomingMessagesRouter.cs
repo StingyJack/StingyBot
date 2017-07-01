@@ -7,9 +7,10 @@
     using Common.Configuration;
     using Common.Models;
     using Common.Nlp;
+    using Common.SlackApi;
+    using Common.SlackApi.Methods;
     using Handlers;
     using SlackConnector.Models;
-    using Common.SlackApi;
 
     /// <summary>
     /// </summary>
@@ -122,8 +123,8 @@
 
         private bool IsThisTheBotDmChannel(string channelId)
         {
-            var imList= new MethodExecutor().ExecImList(new Common.SlackApi.Methods.ImListRequestParams());
-            
+            var imList = new MethodExecutor().ExecImList(new ImListRequestParams());
+
             if (imList.Ims.Any(i => i.Id == channelId))
             {
                 return true;

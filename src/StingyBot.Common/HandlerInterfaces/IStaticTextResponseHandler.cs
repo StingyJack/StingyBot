@@ -6,7 +6,7 @@
     public interface IStaticTextResponseHandler : IUserActionHandler
     {
         void Configure(string messageFile);
-        
+
         Task<Message> ConstructResponse(MessageContext messageContext);
     }
 }

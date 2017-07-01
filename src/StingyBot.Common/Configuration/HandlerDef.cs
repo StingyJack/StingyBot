@@ -1,5 +1,4 @@
-﻿// ReSharper disable ClassNeverInstantiated.Global
-namespace StingyBot.Common.Configuration
+﻿namespace StingyBot.Common.Configuration
 {
     using System;
 
@@ -10,6 +9,7 @@ namespace StingyBot.Common.Configuration
         ///     Assembly qualified type name
         /// </summary>
         public string HandlerFullTypeName { get; set; }
+
         /// <summary>
         ///     A list of json config file names to use for loading (lack of comments making me regret json files for config)
         /// </summary>
