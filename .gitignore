@@ -250,3 +250,6 @@ ModelManifest.xml
 *.debuglog
 *.failedGenLog
 !**/stingypack/StingyJunk.Analyzers.1.0.6219.35507.nupkg
+ConsoleHostZipTemp
+ConsoleHost.zip
+/StingyBot.ConsoleHost.Zip
